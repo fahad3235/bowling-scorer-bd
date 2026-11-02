@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bowling Scorer BD</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div>
+    <h1 id="appTitle">Bowling Scorer BD</h1>
+    <p id="tagline" class="tagline">Ball-by-ball ten-pin scoring, done right.</p>
+  </div>
+  <button id="langBtn" class="langbtn">বাংলা</button>
+</header>
+<main>
+  <section id="setupCard" class="card">
+    <h2 id="setupTitle">Players</h2>
+    <div id="nameInputs" class="nameinputs"></div>
+    <p id="setupError" class="error" role="alert"></p>
+    <div class="row">
+      <button id="addPlayerBtn" class="btn secondary">Add player</button>
+      <button id="startBtn" class="btn primary">Start game</button>
+    </div>
+    <p id="maxPlayersNote" class="muted">Up to 4 players.</p>
+  </section>
+
+  <section id="gameCard" class="card" style="display:none">
+    <div class="gamerow">
+      <h2 id="nowBowling">Bowling now</h2>
+      <p id="winnerLine" class="winner"></p>
+    </div>
+    <div id="cards"></div>
+    <h3 id="pinsLabel" class="padlabel">Pins down</h3>
+    <p id="padHint" class="muted"></p>
+    <div id="pad" class="pad"></div>
+    <p id="padError" class="error" role="alert"></p>
+    <div class="row">
+      <button id="undoBtn" class="btn secondary">Undo last ball</button>
+      <button id="resetBtn" class="btn secondary">Reset game</button>
+      <button id="newGameBtn" class="btn secondary">New game</button>
+    </div>
+    <h3 id="statsTitle">Stats</h3>
+    <div id="statsBox" class="stats"></div>
+  </section>
+
+  <section class="card">
+    <h2 id="historyTitle">Finished games</h2>
+    <div id="historyList"></div>
+    <div class="row"><button id="clearHistoryBtn" class="btn secondary">Clear history</button></div>
+  </section>
+
+  <section class="card">
+    <h2 id="howTitle">How scoring works</h2>
+    <p id="howText"></p>
+  </section>
+</main>
+<footer><p id="footerText"></p></footer>
+<script src="js/logic.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
